@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol AppTaskOperationQueueDelegate: class {
+protocol AppTaskOperationQueueDelegate: AnyObject {
     func delegatingQueue(from:AppTaskOperationQueue) -> DispatchQueue
 
     func willPerformTask(_ queue: AppTaskOperationQueue, _ workItem: AppTaskItem)

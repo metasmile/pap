@@ -73,7 +73,7 @@ public class HashtagenApp: NSObject, PropertyWatchable, BApp
     private let appDefaults = HashtagenApp.defaults as! HashtagenAppDefaults
 
     @objc dynamic
-    public fileprivate (set) lazy var autoSelect: Bool = appDefaults.autoSelect
+    public fileprivate(set) lazy var autoSelect: Bool = appDefaults.autoSelect
 
     required public override init(){
         super.init()

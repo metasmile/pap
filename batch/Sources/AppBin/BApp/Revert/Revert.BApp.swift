@@ -53,7 +53,7 @@ public class RevertApp: NSObject, PropertyWatchable, BApp
     private let appDefaults = RevertApp.defaults as! RevertAppDefaults
 
     @objc dynamic
-    public fileprivate (set) lazy var autoSelect: Bool = appDefaults.autoSelect
+    public fileprivate(set) lazy var autoSelect: Bool = appDefaults.autoSelect
 
     required public override init(){
         super.init()

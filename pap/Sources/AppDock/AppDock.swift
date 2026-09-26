@@ -124,7 +124,7 @@ public struct AppDockContentItem: AppDockContent {
 }
 
 // AppDockReloadableContentView
-protocol AppDockContentView: class{
+protocol AppDockContentView: AnyObject{
     func reloadContent()
     func reloadContentThatFits(size:CGSize)
 }

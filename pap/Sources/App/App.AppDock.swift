@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-public protocol AppDockApp: class, App {
+public protocol AppDockApp: AnyObject, App {
     var content: AppDockContent? {get}
 
     static var fixedContentLayout:Bool {get}
