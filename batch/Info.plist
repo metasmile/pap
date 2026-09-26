@@ -30,34 +30,11 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>btch</string>
-				<string>fb443161082811578</string>
-			</array>
+				</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>78</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>4de4dac2f8e69777783b1df21877e32171c4d237</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict/>
-				<key>KitName</key>
-				<string>Crashlytics</string>
-			</dict>
-		</array>
-	</dict>
-	<key>FacebookAppID</key>
-	<string>443161082811578</string>
-	<key>FacebookDisplayName</key>
-	<string>Photos+</string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3029312734389414~7736928915</string>
-	<key>GADIsAdManagerApp</key>
-	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
@@ -160,10 +137,6 @@
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>AppStoryboard</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
