@@ -213,7 +213,7 @@ fileprivate class ClipboardAppDockContent: NSObject, AppDockContent {
                         cell.indicating = true
                         DispatchQueue.main.async { self.tableView.reloadData() }
                         
-                        self.createAssetFromData(data) {
+                        self.createAssetFromData(data, uti: data.detectedUTI()) {
                             cell.indicating = false
                             DispatchQueue.main.async { self.tableView.reloadData() }
                         }
@@ -344,8 +344,8 @@ fileprivate class ClipboardAppDockContent: NSObject, AppDockContent {
     
     private func saveImageFromURL(_ url: URL, completion: (() -> Void)?) {
         DispatchQueue(label: fileName() + #function, qos: .utility).async {
-            if let data = try? Data(contentsOf: url), let uti = data.uti, (uti.conforms(to: UTI.image) || uti.conforms(to: UTI.movie)) {
-                self.createAssetFromData(data, completion: completion)
+            if let data = try? Data(contentsOf: url), let uti = data.detectedUTI(sourceURL: url), (uti.conforms(to: UTI.image) || uti.conforms(to: UTI.movie)) {
+                self.createAssetFromData(data, uti: uti, completion: completion)
             }
             else {
                 guard !self.isSafariOpened else {
@@ -373,13 +373,11 @@ fileprivate class ClipboardAppDockContent: NSObject, AppDockContent {
         }
     }
     
-    private func createAssetFromData(_ data: Data, completion: (() -> Void)?) {
+    private func createAssetFromData(_ data: Data, uti: UTI?, completion: (() -> Void)?) {
         DispatchQueue(label: fileName() + #function, qos: .utility).async {
             let signal = AsyncSignal()
             signal.begin()
             PHPhotoLibrary.shared().performChanges({
-                let uti = data.uti
-                
                 let url = FileURL.temp("\(UUID().uuidString)", uti, group: ClipboardApp.info.displayName)
                 try? data.write(to: url)
                 

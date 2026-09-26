@@ -22,6 +22,7 @@ changed: class -> struct
 */
 
 import Foundation
+import UniformTypeIdentifiers
 
 #if os(iOS) || os(watchOS)
 import MobileCoreServices
@@ -169,7 +170,11 @@ public struct UTI: RawRepresentable, Equatable {
 
     public init(withMimeType mimeType: String, conformingTo conforming: UTI? = nil) {
 
-        self.init(withTagClass:.mimeType, value: mimeType, conformingTo: conforming)
+        if let type = UTType(mimeType: mimeType) {
+            self.init(rawValue: type.identifier)
+        } else {
+            self.init(withTagClass:.mimeType, value: mimeType, conformingTo: conforming)
+        }
     }
 
 #if os(macOS)
@@ -235,14 +240,14 @@ public struct UTI: RawRepresentable, Equatable {
 
     public var fileExtension: String? {
 
-        return self.tag(with: .fileExtension)
+        return UTType(self.rawValue)?.preferredFilenameExtension ?? self.tag(with: .fileExtension)
     }
 
     /// Return the MIME type that corresponds the the UTI. Returns nil if not available.
 
     public var mimeType: String? {
 
-        return self.tag(with: .mimeType)
+        return UTType(self.rawValue)?.preferredMIMEType ?? self.tag(with: .mimeType)
     }
 
 #if os(macOS)
