@@ -4,7 +4,6 @@
 //
 
 import Foundation
-import Firebase
 
 //INFO: It is recommended that inserted into only UI actions.
 
@@ -132,12 +131,12 @@ extension Loggable {
                 }
             }
 
-            Analytics.log(name:createIdentifier(withFunction: functionName), parameters: paramToCommit)
+            papAnalytics.log(name:createIdentifier(withFunction: functionName), parameters: paramToCommit)
         }
     }
 }
 
-extension Analytics {
+enum papAnalytics {
 
     /// Logs an app event.
     /// 1. The event can have up to 25 parameters.
@@ -184,9 +183,6 @@ extension Analytics {
                 params[k] = _errParamValue
             }
         }
-#if !DEBUG
-        logEvent(name, parameters: params)
-#endif
         print("[i] Logged: ",name, params)
     }
 

@@ -11,22 +11,17 @@ extension AppCenter{
     static var defaultConfigWholeUniversal: AppManagerConfig {
         let defaultAppCollection:[App.Type] = [
             TransformApp.self
-            , FinderApp.self
             , FiltersApp.self
             , ConverterApp.self
             , ArtistApp.self
-            , CleanerApp.self
-            , MemoCamApp.self
             , GIFMakerApp.self
             , RevertApp.self
-            , PDFMakerApp.self
             , CameraApp.self
             , AutoEditorApp.self
             , ExifGhostApp.self
             , SiriApp.self
             , ClipboardApp.self
             , ResizerApp.self
-            , HashtagenApp.self
             , AdjustmentsApp.self
             , DepthEditorApp.self
             , RawEditorApp.self

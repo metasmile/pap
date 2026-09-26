@@ -821,7 +821,7 @@ class ConverterAppDockContent: NSObject, AppDockContent, AppDockDelegate
                 cell.segmentedControl.insertSegment(withTitle: k.key, at: cell.segmentedControl.numberOfSegments, animated: false)
             }
 
-            cell.segmentedControl.selectedSegmentIndex = Array(valueCollection.values).firstIndex(of: item.valueGetter() as? Int ?? PDFMakerAppSettings.ScaleMode.fitPage.rawValue) ?? 0
+            cell.segmentedControl.selectedSegmentIndex = Array(valueCollection.values).firstIndex(of: item.valueGetter() as? Int ?? 0) ?? 0
             cell.didChangeValue = item.valueHandler
             return cell
         }

@@ -15,7 +15,6 @@ import UIKit
 import Photos
 import AVFoundation
 import PhotosUI
-import SwiftyGif
 
 class AssetVideoView: UIView {
     override class var layerClass: AnyClass {
