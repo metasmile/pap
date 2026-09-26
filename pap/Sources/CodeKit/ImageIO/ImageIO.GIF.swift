@@ -6,7 +6,6 @@
 import Foundation
 import UIKit
 import ImageIO
-import MobileCoreServices
 
 public func UIImageGIFRepresentation(with imageFiles: [URL], loopCount: Int = 0, frameDelay: Double, cancellation: (() -> Bool)? = nil, progressHandler: ((Progress) -> Void)? = nil) -> Data? {
     guard let url = UIImageGIFRepresentationURL(with: imageFiles, loopCount: loopCount, frameDelay: frameDelay, cancellation: cancellation, progressHandler: progressHandler) else { return nil }
@@ -29,7 +28,7 @@ public func UIImageGIFRepresentationURL(with imageFiles: [URL], loopCount: Int =
     ]
 
     let url = FileURL.temp("\(UUID().uuidString)", UTI.gif)
-    guard let destination = CGImageDestinationCreateWithURL(url as CFURL, kUTTypeGIF, imageFiles.count, nil) else { return nil }
+    guard let destination = CGImageDestinationCreateWithURL(url as CFURL, "com.compuserve.gif" as CFString, imageFiles.count, nil) else { return nil }
     CGImageDestinationSetProperties(destination, fileProperties as CFDictionary)
     
     let progress = Progress(totalUnitCount: Int64(imageFiles.count))
@@ -59,7 +58,7 @@ public func UIImageGIFRepresentationURL(with imageFilesWithFrameDelay: [(URL, Do
     ]
 
     let url = FileURL.temp(UUID().uuidString, UTI.gif)
-    guard let destination = CGImageDestinationCreateWithURL(url as CFURL, kUTTypeGIF, imageFilesWithFrameDelay.count, nil) else { return nil }
+    guard let destination = CGImageDestinationCreateWithURL(url as CFURL, "com.compuserve.gif" as CFString, imageFilesWithFrameDelay.count, nil) else { return nil }
     CGImageDestinationSetProperties(destination, fileProperties as CFDictionary)
     
     let progress = Progress(totalUnitCount: Int64(imageFilesWithFrameDelay.count))
@@ -107,7 +106,7 @@ public func UIImageGIFRepresentation(_ image: UIImage, duration: TimeInterval, l
 
     let data = NSMutableData()
 
-    guard let destination = CGImageDestinationCreateWithData(data, kUTTypeGIF, frameCount, nil) else {
+    guard let destination = CGImageDestinationCreateWithData(data, "com.compuserve.gif" as CFString, frameCount, nil) else {
         return nil
     }
     CGImageDestinationSetProperties(destination, imageProperties as CFDictionary)
@@ -129,7 +128,7 @@ public extension UIImage {
 
     static func animatedImageWithGIFData(_ data: Data, scale: CGFloat, duration: TimeInterval) -> UIImage? {
 
-        let options = [kCGImageSourceShouldCache as String: true, kCGImageSourceTypeIdentifierHint as String: kUTTypeGIF] as [String : Any]
+        let options = [kCGImageSourceShouldCache as String: true, kCGImageSourceTypeIdentifierHint as String: "com.compuserve.gif" as CFString] as [String : Any]
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, options as CFDictionary) else {
             return nil
         }
@@ -164,7 +163,7 @@ public extension UIImage {
 
     static func animatedImageURLsWithGIFData(_ data: Data, directory:String=NSTemporaryDirectory(), filenamePrefix:String="exported_gif_image_") -> [(url: URL, frameDelay: Double)]? {
 
-        let options = [kCGImageSourceShouldCache as String: true, kCGImageSourceTypeIdentifierHint as String: kUTTypeGIF] as [String : Any]
+        let options = [kCGImageSourceShouldCache as String: true, kCGImageSourceTypeIdentifierHint as String: "com.compuserve.gif" as CFString] as [String : Any]
         guard let imageSource = CGImageSourceCreateWithData(data as CFData, options as CFDictionary) else {
             return nil
         }
@@ -249,7 +248,7 @@ __attribute__((overloadable)) UIImage * UIImageWithAnimatedGIFData(NSData *data,
     {
         NSMutableDictionary *mutableOptions = [NSMutableDictionary dictionary];
         [mutableOptions setObject:@(YES) forKey:(NSString *)kCGImageSourceShouldCache];
-        [mutableOptions setObject:(NSString *)kUTTypeGIF forKey:(NSString *)kCGImageSourceTypeIdentifierHint];
+        [mutableOptions setObject:(NSString *)"com.compuserve.gif" as CFString forKey:(NSString *)kCGImageSourceTypeIdentifierHint];
 
         CGImageSourceRef imageSource = CGImageSourceCreateWithData((__bridge CFDataRef)data, (__bridge CFDictionaryRef)mutableOptions);
 
@@ -308,7 +307,7 @@ __attribute__((overloadable)) NSData * _UIImagesAnimatedGIFRepresentation(NSArra
         };
 
         NSMutableData *mutableData = [NSMutableData data];
-        CGImageDestinationRef destination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)mutableData, kUTTypeGIF, frameCount, NULL);
+        CGImageDestinationRef destination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)mutableData, "com.compuserve.gif" as CFString, frameCount, NULL);
 
         NSDictionary *imageProperties = @{ (__bridge NSString *)ImageMetadata.Dictionary.GIF: @{
                 (__bridge NSString *)kCGImagePropertyGIFLoopCount: @(loopCount)

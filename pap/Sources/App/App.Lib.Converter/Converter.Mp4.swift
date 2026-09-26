@@ -6,7 +6,6 @@
 import Foundation
 import Photos
 import ImageIO
-import MobileCoreServices
 
 struct MP4ConverterOption {
     var avAssetPreset:String = AVAssetExportPresetPassthrough
@@ -63,7 +62,7 @@ class MP4Converter_Mov: OptionableConverterBase<MP4ConverterOption>, MP4Converte
     }
     
     static func canPerformWith(asset: PHAsset) -> Bool {
-        return asset.mediaType == .video && asset.uniformTypeIdentifier != (kUTTypeMPEG4 as String)
+        return asset.mediaType == .video && asset.uniformTypeIdentifier != ("public.mpeg-4")
     }
 }
 

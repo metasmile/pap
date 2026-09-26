@@ -5,7 +5,7 @@
 
 import Foundation
 import Photos
-import MobileCoreServices
+import UniformTypeIdentifiers
 import UIKit
 
 extension PHAsset {
@@ -204,8 +204,8 @@ extension PHAsset {
     }
     
     var hasRawImage: Bool {
-        guard resources.count > 1, let uti = resources.first(where: { $0.type == PHAssetResourceType.alternatePhoto })?.uniformTypeIdentifier as CFString? else { return false }
-        return UTTypeConformsTo(uti, kUTTypeRawImage)
+        guard resources.count > 1, let uti = resources.first(where: { $0.type == PHAssetResourceType.alternatePhoto })?.uniformTypeIdentifier else { return false }
+        return UTType(uti)?.conforms(to: .rawImage) ?? false
     }
 
     var hasDepthEffect: Bool{

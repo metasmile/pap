@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import MobileCoreServices
 import ImageIO
 
 public class LivePhotoImageResourceWriter: NSObject {
@@ -62,7 +61,7 @@ private extension Data{
     func _setMetadata(with metadata:[String:Any]) -> Data{
         let source = CGImageSourceCreateWithData(self as CFData, nil)!
         let imageData = CFDataCreateMutable(nil, 0)!
-        let destination = CGImageDestinationCreateWithData(imageData, kUTTypeJPEG, 1, nil)!
+        let destination = CGImageDestinationCreateWithData(imageData, "public.jpeg" as CFString, 1, nil)!
         CGImageDestinationAddImageFromSource(destination, source, 0, metadata as CFDictionary)
         CGImageDestinationFinalize(destination)
         return imageData as Data

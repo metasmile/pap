@@ -8,7 +8,6 @@
 
 import UIKit
 import Photos
-import MobileCoreServices
 import AVFoundation
 
 class _ArtistAppAsset: AppAsset {

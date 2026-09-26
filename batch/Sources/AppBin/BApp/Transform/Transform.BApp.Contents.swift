@@ -8,7 +8,6 @@
 
 import UIKit
 import Photos
-import MobileCoreServices
 
 class _TransformAppAsset: AppAsset {
     fileprivate weak var editingContext: PHLivePhotoEditingContext?

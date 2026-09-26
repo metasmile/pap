@@ -104,7 +104,7 @@
 		4F71D37EBE213CFCB9A9454E /* CodeKit.UIView.Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71DA1BA6C1703484DE20AC /* CodeKit.UIView.Hierarchy.swift */; };
 		4F71D38413D33BD0AB4143C3 /* GIFMaker.BApp.Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F71D67A89FFDA5EB4C46426 /* GIFMaker.BApp.Assets.xcassets */; };
 		4F71D398E49F216CAF325CAA /* Charge.Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71DDF256F438CFD32C75BE /* Charge.Manager.swift */; };
-		4F71D3A6BA52F23B5F09CACE /* CodeKit.MobileCoreSerivices.UTCoreTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71D73D8E69A0BA9DB5258D /* CodeKit.MobileCoreSerivices.UTCoreTypes.swift */; };
+		4F71D3A6BA52F23B5F09CACE /* CodeKit.UTCoreTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71D73D8E69A0BA9DB5258D /* CodeKit.UTCoreTypes.swift */; };
 		4F71D3B28A365D72A5268F1D /* Filters.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F71D93194BD75FB4B17AAC0 /* Filters.jpg */; };
 		4F71D3BA6CEE53BA8C24C5D0 /* CodeKit.CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71D0BCC7EB4DF7DC229747 /* CodeKit.CVPixelBuffer.swift */; };
 		4F71D3D42C4F6D0CDFD7C91C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F71DDD775E3A20882AB465F /* App.swift */; };
@@ -604,7 +604,7 @@
 		4F71D72325EE1BD2D33BCD05 /* CodeKit.UIApplication.SFSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeKit.UIApplication.SFSafariViewController.swift; sourceTree = "<group>"; };
 		4F71D723D428D24D02EF2598 /* BApp.Chargeable.PaidApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BApp.Chargeable.PaidApps.swift; sourceTree = "<group>"; };
 		4F71D737C3E7372155F27687 /* AppCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCenter.swift; sourceTree = "<group>"; };
-		4F71D73D8E69A0BA9DB5258D /* CodeKit.MobileCoreSerivices.UTCoreTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeKit.MobileCoreSerivices.UTCoreTypes.swift; sourceTree = "<group>"; };
+		4F71D73D8E69A0BA9DB5258D /* CodeKit.UTCoreTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeKit.UTCoreTypes.swift; sourceTree = "<group>"; };
 		4F71D7461275B4916DCBF64F /* AppTaskPrototype.DefaultRestrictedConcurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTaskPrototype.DefaultRestrictedConcurrency.swift; sourceTree = "<group>"; };
 		4F71D7527A6619FFA2F0BEC1 /* Transform.BApp.Contents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.BApp.Contents.swift; sourceTree = "<group>"; };
 		4F71D75DC560C5472FE6CE82 /* Loggable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
@@ -1640,7 +1640,7 @@
 				4F71D8F07DD8E8EEBAD1AC6A /* CodeKit.UIView.GestureRecognizer.swift */,
 				4F71D76E3E10B66CD9C925DA /* CodeKit.String.NSRegularExpression.swift */,
 				4F71DC8D5DF259CEB1A88B0B /* CodeKit.UIView.UIActivityIndicatorView.swift */,
-				4F71D73D8E69A0BA9DB5258D /* CodeKit.MobileCoreSerivices.UTCoreTypes.swift */,
+				4F71D73D8E69A0BA9DB5258D /* CodeKit.UTCoreTypes.swift */,
 				4F71D72325EE1BD2D33BCD05 /* CodeKit.UIApplication.SFSafariViewController.swift */,
 				4F71DE872A02AD13D7B4CD68 /* CodeKit.Data.swift */,
 				511577CE21A4D47C00866D6E /* CodeKit.UIColor.swift */,
@@ -2708,7 +2708,7 @@
 				4F71DB08BCEEBB3AF10B4012 /* CodeKit.UIView.GestureRecognizer.swift in Sources */,
 				4F71DABCD4946C37D0C8F726 /* CodeKit.String.NSRegularExpression.swift in Sources */,
 				4F71D7D79E9F32E12AD8A35F /* CodeKit.UIView.UIActivityIndicatorView.swift in Sources */,
-				4F71D3A6BA52F23B5F09CACE /* CodeKit.MobileCoreSerivices.UTCoreTypes.swift in Sources */,
+				4F71D3A6BA52F23B5F09CACE /* CodeKit.UTCoreTypes.swift in Sources */,
 				4F71D56F8412CC0DD9E4C17E /* CodeKit.UIApplication.SFSafariViewController.swift in Sources */,
 				4F71DBE1D5DF88EEEB274B37 /* CodeKit.Data.swift in Sources */,
 				4F71D477C0192680425B4FC3 /* ExternalDelegate.swift in Sources */,

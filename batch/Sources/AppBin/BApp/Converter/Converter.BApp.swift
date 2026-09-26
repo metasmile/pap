@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import MobileCoreServices
 import Photos
 
 private protocol ConverterAppDefaults: AppDefaults{

@@ -4,7 +4,6 @@
 //
 
 import Foundation
-import MobileCoreServices
 
 public struct UTCoreTypes {
 
@@ -79,19 +78,19 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var Item:String { return kUTTypeItem as String }
+    static var Item:String { return "public.item" }
     @available(iOS 3.0, *)
-    static var Content:String { return kUTTypeContent as String }
+    static var Content:String { return "public.content" }
     @available(iOS 3.0, *)
-    static var CompositeContent:String { return kUTTypeCompositeContent as String }
+    static var CompositeContent:String { return "public.composite-content" }
     @available(iOS 3.0, *)
-    static var Message:String { return kUTTypeMessage as String }
+    static var Message:String { return "public.message" }
     @available(iOS 3.0, *)
-    static var Contact:String { return kUTTypeContact as String }
+    static var Contact:String { return "public.contact" }
     @available(iOS 3.0, *)
-    static var Archive:String { return kUTTypeArchive as String }
+    static var Archive:String { return "public.archive" }
     @available(iOS 3.0, *)
-    static var DiskImage:String { return kUTTypeDiskImage as String }
+    static var DiskImage:String { return "public.disk-image" }
 
 /*
  *  kUTTypeData
@@ -167,23 +166,23 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var Data:String { return kUTTypeData as String }
+    static var Data:String { return "public.data" }
     @available(iOS 3.0, *)
-    static var Directory:String { return kUTTypeDirectory as String }
+    static var Directory:String { return "public.directory" }
     @available(iOS 3.0, *)
-    static var Resolvable:String { return kUTTypeResolvable as String }
+    static var Resolvable:String { return "com.apple.resolvable" }
     @available(iOS 3.0, *)
-    static var SymLink:String { return kUTTypeSymLink as String }
+    static var SymLink:String { return "public.symlink" }
     @available(iOS 8.0, *)
-    static var Executable:String { return kUTTypeExecutable as String }
+    static var Executable:String { return "public.executable" }
     @available(iOS 3.0, *)
-    static var MountPoint:String { return kUTTypeMountPoint as String }
+    static var MountPoint:String { return "com.apple.mount-point" }
     @available(iOS 3.0, *)
-    static var AliasFile:String { return kUTTypeAliasFile as String }
+    static var AliasFile:String { return "com.apple.alias-file" }
     @available(iOS 3.0, *)
-    static var AliasRecord:String { return kUTTypeAliasRecord as String }
+    static var AliasRecord:String { return "com.apple.alias-record" }
     @available(iOS 8.0, *)
-    static var URLBookmarkData:String { return kUTTypeURLBookmarkData as String }
+    static var URLBookmarkData:String { return "com.apple.bookmark" }
 
 /*
  *  kUTTypeURL
@@ -205,9 +204,9 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var URL:String { return kUTTypeURL as String }
+    static var URL:String { return "public.url" }
     @available(iOS 3.0, *)
-    static var FileURL:String { return kUTTypeFileURL as String }
+    static var FileURL:String { return "public.file-url" }
 
 /*
  *  kUTTypeText
@@ -297,25 +296,25 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var Text:String { return kUTTypeText as String }
+    static var Text:String { return "public.text" }
     @available(iOS 3.0, *)
-    static var PlainText:String { return kUTTypePlainText as String }
+    static var PlainText:String { return "public.plain-text" }
     @available(iOS 3.0, *)
-    static var UTF8PlainText:String { return kUTTypeUTF8PlainText as String }
+    static var UTF8PlainText:String { return "public.utf8-plain-text" }
     @available(iOS 3.0, *)
-    static var UTF16ExternalPlainText:String { return kUTTypeUTF16ExternalPlainText as String }
+    static var UTF16ExternalPlainText:String { return "public.utf16-external-plain-text" }
     @available(iOS 3.0, *)
-    static var UTF16PlainText:String { return kUTTypeUTF16PlainText as String }
+    static var UTF16PlainText:String { return "public.utf16-plain-text" }
     @available(iOS 8.0, *)
-    static var DelimitedText:String { return kUTTypeDelimitedText as String }
+    static var DelimitedText:String { return "public.delimited-values-text" }
     @available(iOS 8.0, *)
-    static var CommaSeparatedText:String { return kUTTypeCommaSeparatedText as String }
+    static var CommaSeparatedText:String { return "public.comma-separated-values-text" }
     @available(iOS 8.0, *)
-    static var TabSeparatedText:String { return kUTTypeTabSeparatedText as String }
+    static var TabSeparatedText:String { return "public.tab-separated-values-text" }
     @available(iOS 8.0, *)
-    static var UTF8TabSeparatedText:String { return kUTTypeUTF8TabSeparatedText as String }
+    static var UTF8TabSeparatedText:String { return "public.utf8-tab-separated-values-text" }
     @available(iOS 3.0, *)
-    static var RTF:String { return kUTTypeRTF as String }
+    static var RTF:String { return "public.rtf" }
 
 /*
  *  kUTTypeHTML
@@ -335,9 +334,9 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var HTML:String { return kUTTypeHTML as String }
+    static var HTML:String { return "public.html" }
     @available(iOS 3.0, *)
-    static var XML:String { return kUTTypeXML as String }
+    static var XML:String { return "public.xml" }
 
 /*
  *  kUTTypeSourceCode
@@ -421,25 +420,25 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var SourceCode:String { return kUTTypeSourceCode as String }
+    static var SourceCode:String { return "public.source-code" }
     @available(iOS 8.0, *)
-    static var AssemblyLanguageSource:String { return kUTTypeAssemblyLanguageSource as String }
+    static var AssemblyLanguageSource:String { return "public.assembly-source" }
     @available(iOS 3.0, *)
-    static var CSource:String { return kUTTypeCSource as String }
+    static var CSource:String { return "public.c-source" }
     @available(iOS 3.0, *)
-    static var ObjectiveCSource:String { return kUTTypeObjectiveCSource as String }
+    static var ObjectiveCSource:String { return "public.objective-c-source" }
     @available(iOS 9.0, *)
-    static var SwiftSource:String { return kUTTypeSwiftSource as String }
+    static var SwiftSource:String { return "public.swift-source" }
     @available(iOS 3.0, *)
-    static var CPlusPlusSource:String { return kUTTypeCPlusPlusSource as String }
+    static var CPlusPlusSource:String { return "public.c-plus-plus-source" }
     @available(iOS 3.0, *)
-    static var ObjectiveCPlusPlusSource:String { return kUTTypeObjectiveCPlusPlusSource as String }
+    static var ObjectiveCPlusPlusSource:String { return "public.objective-c-plus-plus-source" }
     @available(iOS 3.0, *)
-    static var CHeader:String { return kUTTypeCHeader as String }
+    static var CHeader:String { return "public.c-header" }
     @available(iOS 3.0, *)
-    static var CPlusPlusHeader:String { return kUTTypeCPlusPlusHeader as String }
+    static var CPlusPlusHeader:String { return "public.c-plus-plus-header" }
     @available(iOS 3.0, *)
-    static var JavaSource:String { return kUTTypeJavaSource as String }
+    static var JavaSource:String { return "com.sun.java-source" }
 
 /*
  *  kUTTypeScript
@@ -523,25 +522,25 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 8.0, *)
-    static var Script:String { return kUTTypeScript as String }
+    static var Script:String { return "public.script" }
     @available(iOS 8.0, *)
-    static var AppleScript:String { return kUTTypeAppleScript as String }
+    static var AppleScript:String { return "com.apple.applescript.text" }
     @available(iOS 8.0, *)
-    static var OSAScript:String { return kUTTypeOSAScript as String }
+    static var OSAScript:String { return "com.apple.applescript.script" }
     @available(iOS 8.0, *)
-    static var OSAScriptBundle:String { return kUTTypeOSAScriptBundle as String }
+    static var OSAScriptBundle:String { return "com.apple.applescript.script-bundle" }
     @available(iOS 8.0, *)
-    static var JavaScript:String { return kUTTypeJavaScript as String }
+    static var JavaScript:String { return "com.netscape.javascript-source" }
     @available(iOS 8.0, *)
-    static var ShellScript:String { return kUTTypeShellScript as String }
+    static var ShellScript:String { return "public.shell-script" }
     @available(iOS 8.0, *)
-    static var PerlScript:String { return kUTTypePerlScript as String }
+    static var PerlScript:String { return "public.perl-script" }
     @available(iOS 8.0, *)
-    static var PythonScript:String { return kUTTypePythonScript as String }
+    static var PythonScript:String { return "public.python-script" }
     @available(iOS 8.0, *)
-    static var RubyScript:String { return kUTTypeRubyScript as String }
+    static var RubyScript:String { return "public.ruby-script" }
     @available(iOS 8.0, *)
-    static var PHPScript:String { return kUTTypePHPScript as String }
+    static var PHPScript:String { return "public.php-script" }
 
 /*
  *  kUTTypeJSON
@@ -579,13 +578,13 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 8.0, *)
-    static var JSON:String { return kUTTypeJSON as String }
+    static var JSON:String { return "public.json" }
     @available(iOS 8.0, *)
-    static var PropertyList:String { return kUTTypePropertyList as String }
+    static var PropertyList:String { return "com.apple.property-list" }
     @available(iOS 8.0, *)
-    static var XMLPropertyList:String { return kUTTypeXMLPropertyList as String }
+    static var XMLPropertyList:String { return "com.apple.xml-property-list" }
     @available(iOS 8.0, *)
-    static var BinaryPropertyList:String { return kUTTypeBinaryPropertyList as String }
+    static var BinaryPropertyList:String { return "com.apple.binary-property-list" }
 
 /*
  *  kUTTypePDF
@@ -630,15 +629,15 @@ public struct UTCoreTypes {
  *    conforms to: public.data, public.composite-content
  */
     @available(iOS 3.0, *)
-    static var PDF:String { return kUTTypePDF as String }
+    static var PDF:String { return "com.adobe.pdf" }
     @available(iOS 3.0, *)
-    static var RTFD:String { return kUTTypeRTFD as String }
+    static var RTFD:String { return "com.apple.rtfd" }
     @available(iOS 3.0, *)
-    static var FlatRTFD:String { return kUTTypeFlatRTFD as String }
+    static var FlatRTFD:String { return "com.apple.flat-rtfd" }
     @available(iOS 3.0, *)
-    static var TXNTextAndMultimediaData:String { return kUTTypeTXNTextAndMultimediaData as String }
+    static var TXNTextAndMultimediaData:String { return "com.apple.txn.text-multimedia-data" }
     @available(iOS 3.0, *)
-    static var WebArchive:String { return kUTTypeWebArchive as String }
+    static var WebArchive:String { return "com.apple.webarchive" }
 
 /*
  *  kUTTypeImage
@@ -753,33 +752,33 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var Image:String { return kUTTypeImage as String }
+    static var Image:String { return "public.image" }
     @available(iOS 3.0, *)
-    static var JPEG:String { return kUTTypeJPEG as String }
+    static var JPEG:String { return "public.jpeg" }
     @available(iOS 3.0, *)
-    static var JPEG2000:String { return kUTTypeJPEG2000 as String }
+    static var JPEG2000:String { return "public.jpeg-2000" }
     @available(iOS 3.0, *)
-    static var TIFF:String { return kUTTypeTIFF as String }
+    static var TIFF:String { return "public.tiff" }
     @available(iOS 3.0, *)
-    static var PICT:String { return kUTTypePICT as String }
+    static var PICT:String { return "com.apple.pict" }
     @available(iOS 3.0, *)
-    static var GIF:String { return kUTTypeGIF as String }
+    static var GIF:String { return "com.compuserve.gif" }
     @available(iOS 3.0, *)
-    static var PNG:String { return kUTTypePNG as String }
+    static var PNG:String { return "public.png" }
     @available(iOS 3.0, *)
-    static var QuickTimeImage:String { return kUTTypeQuickTimeImage as String }
+    static var QuickTimeImage:String { return "com.apple.quicktime-image" }
     @available(iOS 3.0, *)
-    static var AppleICNS:String { return kUTTypeAppleICNS as String }
+    static var AppleICNS:String { return "com.apple.icns" }
     @available(iOS 3.0, *)
-    static var BMP:String { return kUTTypeBMP as String }
+    static var BMP:String { return "com.microsoft.bmp" }
     @available(iOS 3.0, *)
-    static var ICO:String { return kUTTypeICO as String }
+    static var ICO:String { return "com.microsoft.ico" }
     @available(iOS 8.0, *)
-    static var RawImage:String { return kUTTypeRawImage as String }
+    static var RawImage:String { return "public.camera-raw-image" }
     @available(iOS 8.0, *)
-    static var ScalableVectorGraphics:String { return kUTTypeScalableVectorGraphics as String }
+    static var ScalableVectorGraphics:String { return "public.svg-image" }
     @available(iOS 9.1, *)
-    static var LivePhoto:String { return kUTTypeLivePhoto as String }
+    static var LivePhoto:String { return "com.apple.live-photo" }
 
 /*
  *  kUTTypeAudiovisualContent
@@ -922,39 +921,39 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var AudiovisualContent:String { return kUTTypeAudiovisualContent as String }
+    static var AudiovisualContent:String { return "public.audiovisual-content" }
     @available(iOS 3.0, *)
-    static var Movie:String { return kUTTypeMovie as String }
+    static var Movie:String { return "public.movie" }
     @available(iOS 3.0, *)
-    static var Video:String { return kUTTypeVideo as String }
+    static var Video:String { return "public.video" }
     @available(iOS 3.0, *)
-    static var Audio:String { return kUTTypeAudio as String }
+    static var Audio:String { return "public.audio" }
     @available(iOS 3.0, *)
-    static var QuickTimeMovie:String { return kUTTypeQuickTimeMovie as String }
+    static var QuickTimeMovie:String { return "com.apple.quicktime-movie" }
     @available(iOS 3.0, *)
-    static var MPEG:String { return kUTTypeMPEG as String }
+    static var MPEG:String { return "public.mpeg" }
     @available(iOS 8.0, *)
-    static var MPEG2Video:String { return kUTTypeMPEG2Video as String }
+    static var MPEG2Video:String { return "public.mpeg-2-video" }
     @available(iOS 8.0, *)
-    static var MPEG2TransportStream:String { return kUTTypeMPEG2TransportStream as String }
+    static var MPEG2TransportStream:String { return "public.mpeg-2-transport-stream" }
     @available(iOS 3.0, *)
-    static var MP3:String { return kUTTypeMP3 as String }
+    static var MP3:String { return "public.mp3" }
     @available(iOS 3.0, *)
-    static var MPEG4:String { return kUTTypeMPEG4 as String }
+    static var MPEG4:String { return "public.mpeg-4" }
     @available(iOS 3.0, *)
-    static var MPEG4Audio:String { return kUTTypeMPEG4Audio as String }
+    static var MPEG4Audio:String { return "public.mpeg-4-audio" }
     @available(iOS 3.0, *)
-    static var AppleProtectedMPEG4Audio:String { return kUTTypeAppleProtectedMPEG4Audio as String }
+    static var AppleProtectedMPEG4Audio:String { return "com.apple.protected-mpeg-4-audio" }
     @available(iOS 8.0, *)
-    static var AppleProtectedMPEG4Video:String { return kUTTypeAppleProtectedMPEG4Video as String }
+    static var AppleProtectedMPEG4Video:String { return "com.apple.protected-mpeg-4-video" }
     @available(iOS 8.0, *)
-    static var AVIMovie:String { return kUTTypeAVIMovie as String }
+    static var AVIMovie:String { return "public.avi" }
     @available(iOS 8.0, *)
-    static var AudioInterchangeFileFormat:String { return kUTTypeAudioInterchangeFileFormat as String }
+    static var AudioInterchangeFileFormat:String { return "public.aiff-audio" }
     @available(iOS 8.0, *)
-    static var WaveformAudio:String { return kUTTypeWaveformAudio as String }
+    static var WaveformAudio:String { return "com.microsoft.waveform-audio" }
     @available(iOS 8.0, *)
-    static var MIDIAudio:String { return kUTTypeMIDIAudio as String }
+    static var MIDIAudio:String { return "public.midi-audio" }
 
 /*
  *  kUTTypePlaylist
@@ -973,9 +972,9 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 8.0, *)
-    static var Playlist:String { return kUTTypePlaylist as String }
+    static var Playlist:String { return "public.playlist" }
     @available(iOS 8.0, *)
-    static var M3UPlaylist:String { return kUTTypeM3UPlaylist as String }
+    static var M3UPlaylist:String { return "public.m3u-playlist" }
 
 /*
  *  kUTTypeFolder
@@ -1051,23 +1050,23 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var Folder:String { return kUTTypeFolder as String }
+    static var Folder:String { return "public.folder" }
     @available(iOS 3.0, *)
-    static var Volume:String { return kUTTypeVolume as String }
+    static var Volume:String { return "public.volume" }
     @available(iOS 3.0, *)
-    static var Package:String { return kUTTypePackage as String }
+    static var Package:String { return "com.apple.package" }
     @available(iOS 3.0, *)
-    static var Bundle:String { return kUTTypeBundle as String }
+    static var Bundle:String { return "com.apple.bundle" }
     @available(iOS 8.0, *)
-    static var PluginBundle:String { return kUTTypePluginBundle as String }
+    static var PluginBundle:String { return "com.apple.plugin" }
     @available(iOS 8.0, *)
-    static var SpotlightImporter:String { return kUTTypeSpotlightImporter as String }
+    static var SpotlightImporter:String { return "com.apple.metadata-importer" }
     @available(iOS 8.0, *)
-    static var QuickLookGenerator:String { return kUTTypeQuickLookGenerator as String }
+    static var QuickLookGenerator:String { return "com.apple.quicklook-generator" }
     @available(iOS 8.0, *)
-    static var XPCService:String { return kUTTypeXPCService as String }
+    static var XPCService:String { return "com.apple.xpc-service" }
     @available(iOS 3.0, *)
-    static var Framework:String { return kUTTypeFramework as String }
+    static var Framework:String { return "com.apple.framework" }
 
 /*
  *  kUTTypeApplication
@@ -1136,25 +1135,25 @@ public struct UTCoreTypes {
  */
 // Abstract executable types
     @available(iOS 3.0, *)
-    static var Application:String { return kUTTypeApplication as String }
+    static var Application:String { return "com.apple.application" }
     @available(iOS 3.0, *)
-    static var ApplicationBundle:String { return kUTTypeApplicationBundle as String }
+    static var ApplicationBundle:String { return "com.apple.application-bundle" }
     @available(iOS 3.0, *)
-    static var ApplicationFile:String { return kUTTypeApplicationFile as String }
+    static var ApplicationFile:String { return "com.apple.application-file" }
     @available(iOS 8.0, *)
-    static var UnixExecutable:String { return kUTTypeUnixExecutable as String }
+    static var UnixExecutable:String { return "public.unix-executable" }
 
 // Other platform binaries
     @available(iOS 8.0, *)
-    static var WindowsExecutable:String { return kUTTypeWindowsExecutable as String }
+    static var WindowsExecutable:String { return "com.microsoft.windows-executable" }
     @available(iOS 8.0, *)
-    static var JavaClass:String { return kUTTypeJavaClass as String }
+    static var JavaClass:String { return "com.sun.java-class" }
     @available(iOS 8.0, *)
-    static var JavaArchive:String { return kUTTypeJavaArchive as String }
+    static var JavaArchive:String { return "com.sun.java-archive" }
 
 // Misc. binaries
     @available(iOS 8.0, *)
-    static var SystemPreferencesPane:String { return kUTTypeSystemPreferencesPane as String }
+    static var SystemPreferencesPane:String { return "com.apple.systempreference.prefpane" }
 
 /*
  *  kUTTypeGNUZipArchive
@@ -1182,11 +1181,11 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 8.0, *)
-    static var GNUZipArchive:String { return kUTTypeGNUZipArchive as String }
+    static var GNUZipArchive:String { return "org.gnu.gnu-zip-archive" }
     @available(iOS 8.0, *)
-    static var Bzip2Archive:String { return kUTTypeBzip2Archive as String }
+    static var Bzip2Archive:String { return "public.bzip2-archive" }
     @available(iOS 8.0, *)
-    static var ZipArchive:String { return kUTTypeZipArchive as String }
+    static var ZipArchive:String { return "public.zip-archive" }
 
 /*
  *  kUTTypeSpreadsheet
@@ -1213,11 +1212,11 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 8.0, *)
-    static var Spreadsheet:String { return kUTTypeSpreadsheet as String }
+    static var Spreadsheet:String { return "public.spreadsheet" }
     @available(iOS 8.0, *)
-    static var Presentation:String { return kUTTypePresentation as String }
+    static var Presentation:String { return "public.presentation" }
     @available(iOS 8.0, *)
-    static var Database:String { return kUTTypeDatabase as String }
+    static var Database:String { return "public.database" }
 
 /*
  *  kUTTypeVCard
@@ -1251,13 +1250,13 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var VCard:String { return kUTTypeVCard as String }
+    static var VCard:String { return "public.vcard" }
     @available(iOS 8.0, *)
-    static var ToDoItem:String { return kUTTypeToDoItem as String }
+    static var ToDoItem:String { return "public.to-do-item" }
     @available(iOS 8.0, *)
-    static var CalendarEvent:String { return kUTTypeCalendarEvent as String }
+    static var CalendarEvent:String { return "public.calendar-event" }
     @available(iOS 8.0, *)
-    static var EmailMessage:String { return kUTTypeEmailMessage as String }
+    static var EmailMessage:String { return "public.email-message" }
 
 /*
  *  kUTTypeInternetLocation
@@ -1269,7 +1268,7 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 8.0, *)
-    static var InternetLocation:String { return kUTTypeInternetLocation as String }
+    static var InternetLocation:String { return "com.apple.internet-location" }
 
 /*
  *  kUTTypeInkText
@@ -1334,20 +1333,20 @@ public struct UTCoreTypes {
  *
  */
     @available(iOS 3.0, *)
-    static var InkText:String { return kUTTypeInkText as String }
+    static var InkText:String { return "com.apple.ink.inktext" }
     @available(iOS 8.0, *)
-    static var Font:String { return kUTTypeFont as String }
+    static var Font:String { return "public.font" }
     @available(iOS 8.0, *)
-    static var Bookmark:String { return kUTTypeBookmark as String }
+    static var Bookmark:String { return "public.bookmark" }
     @available(iOS 8.0, *)
-    static var _3DContent:String { return kUTType3DContent as String }
+    static var _3DContent:String { return "public.3d-content" }
     @available(iOS 8.0, *)
-    static var PKCS12:String { return kUTTypePKCS12 as String }
+    static var PKCS12:String { return "com.rsa.pkcs-12" }
     @available(iOS 8.0, *)
-    static var X509Certificate:String { return kUTTypeX509Certificate as String }
+    static var X509Certificate:String { return "public.x509-certificate" }
     @available(iOS 8.0, *)
-    static var ElectronicPublication:String { return kUTTypeElectronicPublication as String }
+    static var ElectronicPublication:String { return "org.idpf.epub-container" }
     @available(iOS 8.0, *)
-    static var Log:String { return kUTTypeLog as String }
+    static var Log:String { return "public.log" }
 
 }

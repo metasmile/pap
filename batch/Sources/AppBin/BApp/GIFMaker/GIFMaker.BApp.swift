@@ -8,7 +8,6 @@
 
 import UIKit
 import Photos
-import MobileCoreServices
 
 //INFO: feature reference: https://ezgif.com
 
