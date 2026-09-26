@@ -253,9 +253,9 @@ public class CleanerApp: NSObject, BApp, LaunchableApp, PHAssetFinalizableApp, P
 
         }else{
             DispatchQueue.main.async{
-                UIAlertController.alert("There are not any deleting targets in selected items.") { action in
+                UIAlertController.alert("There are not any deleting targets in selected items.", completion: { action in
                     asyncSignal.end()
-                }
+                })
             }
         }
         asyncSignal.waitUntilEnd()

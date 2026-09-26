@@ -212,9 +212,9 @@ extension FinderApp{
 
                 if let url = VisionTextDetectResultAction_Translation.makeUrl(text: strings.joined().trimmed) {
                     let action = UIAlertAction(title: VisionTextDetectResultAction_Translation.title, style: .default, handler: { action in
-                        UIApplication.openSafari(with: url) {
+                        UIApplication.openSafari(with: url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                     action.accessoryImage = VisionTextDetectResultAction_Translation.iconImage
                     actionSheet.addAction(action)

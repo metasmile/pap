@@ -95,9 +95,9 @@ extension Array where Element:VisionTextDetectResult {
                 //sub actions
                 let _quickAction = { (t: String) -> UIAlertAction in
                     return UIAlertAction(title: t, style: .default, handler: { action in
-                        UIApplication.openSafari(with:url) {
+                        UIApplication.openSafari(with:url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                 }
 
@@ -528,9 +528,9 @@ extension Array where Element:VisionTextDetectResult {
                 let _quickAction = { (t: String) -> UIAlertAction? in
                     if let url = url_to_flight, UIApplication.shared.canOpenURL(url){
                         return UIAlertAction(title: t, style: .default, handler: { action in
-                            UIApplication.openSafari(with:url) {
+                            UIApplication.openSafari(with:url, didDismiss: {
                                 asyncSignal.end()
-                            }
+                            })
                         })
                     }
                     return nil
@@ -610,9 +610,9 @@ extension Array where Element:VisionTextDetectResult {
                 let _quickAction = { (t: String) -> UIAlertAction? in
                     if let url = exchangeURL, UIApplication.shared.canOpenURL(url){
                         return UIAlertAction(title: t, style: .default, handler: { action in
-                            UIApplication.openSafari(with:url) {
+                            UIApplication.openSafari(with:url, didDismiss: {
                                 asyncSignal.end()
-                            }
+                            })
                         })
                     }
                     return nil
@@ -721,9 +721,9 @@ extension Array where Element:VisionTextDetectResult {
 
                 if let url = VisionTextDetectResultAction_Translation.makeUrl(text: plainText) {
                     let action = UIAlertAction(title: VisionTextDetectResultAction_Translation.title, style: .default, handler: { action in
-                        UIApplication.openSafari(with: url) {
+                        UIApplication.openSafari(with: url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                     action.accessoryImage = VisionTextDetectResultAction_Translation.iconImage
                     alert.addAction(action)
@@ -749,9 +749,9 @@ extension Array where Element:VisionTextDetectResult {
                     guard let code = barcode.rawValue, let url = URL(string: "https://google.com/search?q=\(code)") else { break }
                     
                     let action = UIAlertAction(title: code, style: .default, handler: { action in
-                        UIApplication.openSafari(with: url) {
+                        UIApplication.openSafari(with: url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                     action.accessoryImage = R.image.appActionIconURL()
                     alert.addAction(action)
@@ -831,9 +831,9 @@ extension Array where Element:VisionTextDetectResult {
                     guard let product = barcode.rawValue, let url = URL(string: "https://google.com/search?q=\(product)") else { break }
                     
                     let action = UIAlertAction(title: product, style: .default, handler: { action in
-                        UIApplication.openSafari(with: url) {
+                        UIApplication.openSafari(with: url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                     action.accessoryImage = R.image.appActionIconURL()
                     alert.addAction(action)
@@ -841,9 +841,9 @@ extension Array where Element:VisionTextDetectResult {
                     guard let isbn = barcode.rawValue, let url = URL(string: "https://isbnsearch.org/isbn/\(isbn)") else { break }
                     
                     let action = UIAlertAction(title: isbn, style: .default, handler: { action in
-                        UIApplication.openSafari(with: url) {
+                        UIApplication.openSafari(with: url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                     action.accessoryImage = R.image.appActionIconURL()
                     alert.addAction(action)
@@ -854,9 +854,9 @@ extension Array where Element:VisionTextDetectResult {
                     else { break }
                     
                     let action = UIAlertAction(title: urlString, style: .default, handler: { action in
-                        UIApplication.openSafari(with: url) {
+                        UIApplication.openSafari(with: url, didDismiss: {
                             asyncSignal.end()
-                        }
+                        })
                     })
                     action.accessoryImage = R.image.appActionIconURL()
                     alert.addAction(action)
@@ -954,9 +954,9 @@ extension Array where Element:VisionTextDetectResult {
 
                         if let url = VisionTextDetectResultAction_Translation.makeUrl(text: plainText) {
                             let action = UIAlertAction(title: VisionTextDetectResultAction_Translation.title, style: .default, handler: { action in
-                                UIApplication.openSafari(with: url) {
+                                UIApplication.openSafari(with: url, didDismiss: {
                                     asyncSignal.end()
-                                }
+                                })
                             })
                             action.accessoryImage = VisionTextDetectResultAction_Translation.iconImage
                             _actions.append(action)
