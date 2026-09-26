@@ -124,3 +124,6 @@ pap.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 pap.xcworkspace/contents.xcworkspacedata
 pap.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 *.DS-Store
+# agent sandbox scratch
+.tmpbuild/
+.build/
