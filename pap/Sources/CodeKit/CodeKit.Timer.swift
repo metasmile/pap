@@ -14,7 +14,7 @@ extension Timer{
 
     @available(iOS 10.0, *)
     @discardableResult
-    open class func scheduledTimer(identifier:String, withTimeInterval interval: TimeInterval, repeats: Bool=false, block: @escaping (Timer) -> Swift.Void) -> Timer{
+    public class func scheduledTimer(identifier:String, withTimeInterval interval: TimeInterval, repeats: Bool=false, block: @escaping (Timer) -> Swift.Void) -> Timer{
         let t = Timer.scheduledTimer(withTimeInterval: interval, repeats: repeats, block: block)
 
         getScheduledTimer(identifier:identifier)?.invalidate()
@@ -25,13 +25,13 @@ extension Timer{
 
     @available(iOS 10.0, *)
     @discardableResult
-    open class func getScheduledTimer(identifier:String) -> Timer?{
+    public class func getScheduledTimer(identifier:String) -> Timer?{
         return Timers.timers[identifier]
     }
     
     @available(iOS 10.0, *)
     @discardableResult
-    open class func removeScheduledTimer(identifier:String) -> Bool{
+    public class func removeScheduledTimer(identifier:String) -> Bool{
         if let timer = getScheduledTimer(identifier:identifier){
             timer.invalidate()
             Timers.timers[identifier] = nil

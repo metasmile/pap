@@ -111,7 +111,7 @@ private struct _NSTextCheckingComponent: NSTextCheckingComponent {
 }
 
 extension NSTextCheckingResult{
-    open var componentObject: NSTextCheckingComponent? {
+    public var componentObject: NSTextCheckingComponent? {
 
         if let c = self.components, c.count > 0{
             return _NSTextCheckingComponent(
@@ -131,23 +131,23 @@ extension NSTextCheckingResult{
         return nil
     }
 
-    open var flight: NSTextCheckingFlightComponent? {
+    public var flight: NSTextCheckingFlightComponent? {
         return componentObject
     }
 
-    open var address: NSTextCheckingAddressComponent? {
+    public var address: NSTextCheckingAddressComponent? {
         return componentObject
     }
 
-    open var telephoneNumber: NSTextCheckingTelephoneNumberComponent? {
+    public var telephoneNumber: NSTextCheckingTelephoneNumberComponent? {
         return componentObject
     }
 
-    open var contact: NSTextCheckingContactComponent? {
+    public var contact: NSTextCheckingContactComponent? {
         return componentObject
     }
 
-    open var person: NSTextCheckingPersonComponent? {
+    public var person: NSTextCheckingPersonComponent? {
         return componentObject
     }
 }
