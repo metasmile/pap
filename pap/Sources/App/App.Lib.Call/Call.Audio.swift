@@ -26,8 +26,8 @@ func configureAudioSession() {
     print("Configuring audio session")
     let session = AVAudioSession.sharedInstance()
     do {
-        try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        try session.setMode(AVAudioSessionModeVoiceChat)
+        try session.setCategory(.playAndRecord)
+        try session.setMode(.voiceChat)
     } catch (let error) {
         print("Error while configuring audio session: \(error)")
     }
