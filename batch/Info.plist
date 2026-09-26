@@ -30,7 +30,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>btch</string>
-				</array>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

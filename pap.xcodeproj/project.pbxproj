@@ -446,10 +446,10 @@
 		0ABFCF871F14B65C0078A583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ABFCF921F14B7CB0078A583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1568E1353EF5089D4F8C7CA3 /* StoryboardSegueIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoryboardSegueIdentifierProtocol.swift; path = pap/Sources/Imported/Rswift/Library/Core/StoryboardSegueIdentifierProtocol.swift; sourceTree = SOURCE_ROOT; };
-		194C3C756CB074B9C450270F /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; name = Readme.md; path = pap/Sources/Imported/SwiftyGif/Readme.md; sourceTree = SOURCE_ROOT; };
+		194C3C756CB074B9C450270F /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = pap/Sources/Imported/SwiftyGif/Readme.md; sourceTree = SOURCE_ROOT; };
 		1AC971FAF5888365BF0D0B13 /* VisionLabelDetectResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisionLabelDetectResult.swift; sourceTree = "<group>"; };
 		1FB8AE781505350E91329F86 /* ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageResource.swift; path = pap/Sources/Imported/Rswift/Library/Core/ImageResource.swift; sourceTree = SOURCE_ROOT; };
-		20807642ADDE9B88E0A4542F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = pap/Sources/Imported/SwiftyGif/LICENSE; sourceTree = SOURCE_ROOT; };
+		20807642ADDE9B88E0A4542F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = pap/Sources/Imported/SwiftyGif/LICENSE; sourceTree = SOURCE_ROOT; };
 		20EF2B57390A6CBB3C44D4A6 /* Cleaner.GarbageDetector.Lockscreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Cleaner.GarbageDetector.Lockscreen.swift; sourceTree = "<group>"; };
 		233ECEB1785BE1787124E964 /* NibResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NibResource.swift; path = pap/Sources/Imported/Rswift/Library/Core/NibResource.swift; sourceTree = SOURCE_ROOT; };
 		26BE9F9116283CE0E112906D /* Finder.BApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Finder.BApp.swift; sourceTree = "<group>"; };
@@ -773,12 +773,12 @@
 		54A5279E82A9F20A1840EA8E /* Cleaner.BApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Cleaner.BApp.swift; sourceTree = "<group>"; };
 		566189F9325741250EFF96E9 /* Data+FileResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+FileResource.swift"; path = "pap/Sources/Imported/Rswift/Library/Foundation/Data+FileResource.swift"; sourceTree = SOURCE_ROOT; };
 		5F7D9A9B171D717562F27462 /* Call.Audio.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Call.Audio.swift; sourceTree = "<group>"; };
-		647EF119F8B689939C63FE71 /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; path = Readme.md; sourceTree = "<group>"; };
+		647EF119F8B689939C63FE71 /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		662696611ECC127CD4175501 /* Finder.BApp.Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Finder.BApp.Assets.xcassets; sourceTree = "<group>"; };
 		66D252788AF0FEC996085A57 /* UIImage+ImageResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageResource.swift"; path = "pap/Sources/Imported/Rswift/Library/UIKit/UIImage+ImageResource.swift"; sourceTree = SOURCE_ROOT; };
 		70446EC06CCEC244B61AF383 /* UIColor+ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+ColorResource.swift"; path = "pap/Sources/Imported/Rswift/Library/UIKit/UIColor+ColorResource.swift"; sourceTree = SOURCE_ROOT; };
 		7568289E38DA0F165C252FD1 /* FontResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontResource.swift; path = pap/Sources/Imported/Rswift/Library/Core/FontResource.swift; sourceTree = SOURCE_ROOT; };
-		78BE30778D6BD7AF855A9931 /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; name = Readme.md; path = pap/Sources/Imported/Rswift/Readme.md; sourceTree = SOURCE_ROOT; };
+		78BE30778D6BD7AF855A9931 /* Readme.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = Readme.md; path = pap/Sources/Imported/Rswift/Readme.md; sourceTree = SOURCE_ROOT; };
 		78E94D8ED011871BC8B121F2 /* App.Finalizable.PHAssetResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = App.Finalizable.PHAssetResource.swift; sourceTree = "<group>"; };
 		7A62A59A8599B4D4B7A2AE59 /* UICollectionView+ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+ReuseIdentifierProtocol.swift"; path = "pap/Sources/Imported/Rswift/Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		7A640FC6D7A8876238987555 /* VisionBarcodeDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisionBarcodeDetector.swift; sourceTree = "<group>"; };
@@ -790,7 +790,7 @@
 		900D100DA10075A8070C6D13 /* VisionTextDetectResult.Actions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisionTextDetectResult.Actions.swift; sourceTree = "<group>"; };
 		90BC236FA81151088E977854 /* Hashtagen.BApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Hashtagen.BApp.swift; sourceTree = "<group>"; };
 		922E75D6BD028FE6B5A000B2 /* MemoCam.BApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MemoCam.BApp.swift; sourceTree = "<group>"; };
-		9387AEC4D34E7F947CF1C01B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9387AEC4D34E7F947CF1C01B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		94E086EF049FEF05E8317E8B /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		9A22D1C08E853C820DE13213 /* TagListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		9ACE9C181DDC2718CF9CCCD0 /* VisionUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisionUtil.swift; sourceTree = "<group>"; };
@@ -891,7 +891,7 @@
 		D6DE7528B0BC4C93416C91E0 /* VisionTextDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisionTextDetector.swift; sourceTree = "<group>"; };
 		DB056FE3A65E58B39D122860 /* VisionTextDetectResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VisionTextDetectResult.swift; sourceTree = "<group>"; };
 		DB48C2C15B513B921A3F34BA /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = pap/Sources/Imported/Rswift/Library/Core/ColorResource.swift; sourceTree = SOURCE_ROOT; };
-		DD48050B1D1311B88DD89442 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = pap/Sources/Imported/Rswift/LICENSE; sourceTree = SOURCE_ROOT; };
+		DD48050B1D1311B88DD89442 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = pap/Sources/Imported/Rswift/LICENSE; sourceTree = SOURCE_ROOT; };
 		E3250A6AB7AADCA6AA754CA3 /* MemoCam.BApp.Launchable.OptionsKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MemoCam.BApp.Launchable.OptionsKeys.swift; sourceTree = "<group>"; };
 		E44E2D5CD9560B2F7E061C95 /* CloseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		E619C855AEEC0F860F788D37 /* Validatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = pap/Sources/Imported/Rswift/Library/Core/Validatable.swift; sourceTree = SOURCE_ROOT; };
@@ -969,7 +969,6 @@
 				E3250A6AB7AADCA6AA754CA3 /* MemoCam.BApp.Launchable.OptionsKeys.swift */,
 				922E75D6BD028FE6B5A000B2 /* MemoCam.BApp.swift */,
 			);
-			name = MemoCam;
 			path = MemoCam;
 			sourceTree = "<group>";
 		};
@@ -990,7 +989,6 @@
 				D6DE7528B0BC4C93416C91E0 /* VisionTextDetector.swift */,
 				9ACE9C181DDC2718CF9CCCD0 /* VisionUtil.swift */,
 			);
-			name = App.Lib.Vision;
 			path = App.Lib.Vision;
 			sourceTree = "<group>";
 		};
@@ -1003,7 +1001,6 @@
 				DD48050B1D1311B88DD89442 /* LICENSE */,
 				78BE30778D6BD7AF855A9931 /* Readme.md */,
 			);
-			name = Rswift;
 			path = Rswift;
 			sourceTree = "<group>";
 		};
@@ -1885,7 +1882,6 @@
 				A47CC27AD4F198D89C0B7C21 /* Call.ProviderDelegate.swift */,
 				86ED23EADF1FF60C4C5CD0C0 /* Call.swift */,
 			);
-			name = App.Lib.Call;
 			path = App.Lib.Call;
 			sourceTree = "<group>";
 		};
@@ -1908,7 +1904,6 @@
 				9A22D1C08E853C820DE13213 /* TagListView.swift */,
 				E7FACA362D2540E5052591A2 /* TagView.swift */,
 			);
-			name = TagListView;
 			path = TagListView;
 			sourceTree = "<group>";
 		};
@@ -1921,7 +1916,6 @@
 				20807642ADDE9B88E0A4542F /* LICENSE */,
 				194C3C756CB074B9C450270F /* Readme.md */,
 			);
-			name = SwiftyGif;
 			path = SwiftyGif;
 			sourceTree = "<group>";
 		};
@@ -2230,7 +2224,6 @@
 				662696611ECC127CD4175501 /* Finder.BApp.Assets.xcassets */,
 				26BE9F9116283CE0E112906D /* Finder.BApp.swift */,
 			);
-			name = Finder;
 			path = Finder;
 			sourceTree = "<group>";
 		};
@@ -2240,7 +2233,6 @@
 				48EB88515FAB05142B30DEFE /* Hashtagen.BApp.Assets.xcassets */,
 				90BC236FA81151088E977854 /* Hashtagen.BApp.swift */,
 			);
-			name = Hashtagen;
 			path = Hashtagen;
 			sourceTree = "<group>";
 		};
@@ -2252,7 +2244,6 @@
 				20EF2B57390A6CBB3C44D4A6 /* Cleaner.GarbageDetector.Lockscreen.swift */,
 				8B81920EC23493C4B1808007 /* Cleaner.GarbageDetector.swift */,
 			);
-			name = Cleaner;
 			path = Cleaner;
 			sourceTree = "<group>";
 		};
@@ -2320,33 +2311,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					A00FDBCC21823532005EAD1B = {
-						CreatedOnToolsVersion = 10.0;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.Siri = {
-								enabled = 1;
-							};
-						};
-					};
-					A0CBFE3B219ADBA2007A5278 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 0;
-							};
-							com.apple.SafariKeychain = {
-								enabled = 1;
-							};
-						};
-					};
-					A0F086BF20AC6C9B00E74025 = {
-						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0ABFCF771F14B65C0078A583;
 					};
 				};
 			};
@@ -3309,7 +3273,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stells.batch;
+				PRODUCT_BUNDLE_IDENTIFIER = co.stells.batch;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -3333,7 +3297,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stells.batch;
+				PRODUCT_BUNDLE_IDENTIFIER = co.stells.batch;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
