@@ -120,7 +120,7 @@ class PhotoPickerViewController: AppDockViewController {
         currentTraitCollection = traitCollection
 
         //listen PHPhotoLibrary changes
-        PhotosManager.default.watch(\.changes) {
+        PhotosManager.default.watch(\PhotosManager.changes) {
             guard let changeInstance = PhotosManager.default.changes else { return }
 
             DispatchQueue.main.async{
@@ -135,7 +135,7 @@ class PhotoPickerViewController: AppDockViewController {
         }
 
         //monitor latest AppCenter task
-        AppCenter.default.task.watch(\.appIdentifiersFinished) {
+        AppCenter.default.task.watch(\AppTaskManager.appIdentifiersFinished) {
             DispatchQueue.main.async{
                 self.flushQueuedPhotoLibraryChanges()
             }
@@ -175,8 +175,7 @@ class PhotoPickerViewController: AppDockViewController {
         dragSelectionGesture.maximumNumberOfTouches = 1
         photoCollectionView.addGestureRecognizer(dragSelectionGesture)
 
-        //AppCenter.chargeManager related
-        initializeChargeWhenViewDidLoad()
+        //AppCenter.chargeManager related (charge removed; reimplement later)
 
         //INFO: maintain last
         updateUIDisplays()
@@ -223,13 +222,11 @@ class PhotoPickerViewController: AppDockViewController {
         }
 
         updateUIDisplays()
-        registerChargeObservingTimer()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        unregisterChargeObservingTimer()
         cancelPreheatingIfNeeded()
     }
 
@@ -467,7 +464,7 @@ class PhotoPickerViewController: AppDockViewController {
         //update done execution state
         updateNavigationLeftBarButton()
 
-        if updateDoneButtonChargeableState() {
+        if true {
             if appDockView?.accessory == nil {
                 appDockView?.accessory = batchPreviewView
             }
@@ -503,7 +500,7 @@ class PhotoPickerViewController: AppDockViewController {
     internal func updateNavigationLeftBarButton() {
         if PHPhotoLibrary.authorizationStatus() == .authorized {
             navigationItem.hidesBackButton = false
-            if updateDoneButtonChargeableState() || self.isSelectionMode {
+            if true || self.isSelectionMode {
                 if let app = AppCenter.default.currentInstanceAs(Recordable.self) {
                     self.updateUndoButtonStatus(app)
 
@@ -1028,9 +1025,6 @@ extension PhotoPickerViewController: PreviewViewDelegate {
 
     func batchPreviewView(_ view: PreviewView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         if let _ = AppCenter.default.currentInstanceAs(PhotoEditViewControllerDelegatableApp.self), appDockView?.contentLayoutState != .maximized {
-            return true
-        }
-        else if let _ = AppCenter.default.currentInstanceAs(AppPreviewActionable.self), let rewards = AppCenter.paidChargeableTypeInCurrentContext?.reward, rewards != .blockOfUses {
             return true
         }
         else {

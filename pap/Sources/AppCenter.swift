@@ -26,8 +26,8 @@ public final class AppCenter: AppManager, PropertyWatchable {
         }
         assert(apps.first != nil,"\(apps) is wrongly defined check apps array.")
 
-        self.watch(\.currentIdentifier) { (target, value) in
-            Defaults.shared.appIdentifier = target.currentIdentifier
+        self.watch(\AppManager.currentIdentifier) { (_, _) in
+            Defaults.shared.appIdentifier = self.currentIdentifier
             print("Current App: \(Defaults.shared.appIdentifier ?? "nil")")
 
             papLog.appSelected()

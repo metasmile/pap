@@ -31,7 +31,7 @@ extension EKEventEditViewController{
         }
 
         if let delegator = delegator{
-            delegator.watch(\.completedEKEventEditViewAction) {
+            delegator.watch(\EKEventEditViewDelegator.completedEKEventEditViewAction) {
                 let completedAction = delegator.completedEKEventEditViewAction.action
                 willDismiss?(completedAction)
 

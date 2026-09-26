@@ -5,15 +5,94 @@
 //  Created by HYOJIN MO on 09/11/2018.
 //  Copyright © 2018 Stells. All rights reserved.
 //
-        // watch stubbed
-                else {
-                    let defaults = type(of: self).defaults as! ResizerAppDefaults
-                    let filter = controllerContent.getFilter(by: defaults.resizeFilterName)
 
-                    self.config?.filter = CIFrameFilterItem(filter, backgroundColor: UIColor(rgba: defaults.backgroundColorValue), borderWidth: CGFloat(defaults.borderWidth))
-                }
-            }
+import UIKit
+import Photos
+import MetalPerformanceShaders
+
+protocol ResizerAppDefaults: AppDefaults {
+    var resizeFilterName: String? { get set }
+    var backgroundColorValue: Int { get set }
+    var borderWidth: Double { get set }
+}
+
+extension Defaults: ResizerAppDefaults {
+    var resizeFilterName: String? {
+        get { return get(or: AspectRatioOption.original.name) }
+        set { set(newValue); papLog.app.defaults.log(value:newValue ?? AspectRatioOption.original.name) }
+    }
+
+    var backgroundColorValue: Int {
+        get {
+            return get(or:CIFrameFillFilter.BlurFilledBackgroundColorValue)
         }
+
+        set { set(newValue); papLog.app.defaults.log(value:newValue) }
+    }
+
+    var borderWidth: Double {
+        get { return get(or: 0) }
+        set { set(newValue); papLog.app.defaults.log(value:newValue) }
+    }
+}
+
+public class ResizerAppConfigValue: NSObject, AppConfigAdoptableValuable {
+    @objc dynamic
+    public var filter: ImageEditStateValue?
+
+    public func adoptValues(fromOther: AppConfigValuable) {
+        if let other = fromOther as? ResizerAppConfigValue, let filter = other.filter {
+            self.filter = filter
+        }
+    }
+}
+
+class ResizerApp: NSObject, BApp, ConfigurableApp, _ConfigurableApp,
+    PHAssetFinalizableApp, EditableApp, PreviewProcessableApp, AppDockApp,
+    PhotoPickerCollectionViewDelegatableApp, PhotoPickerViewControllerAppearanceDelegatableApp,
+PhotoEditViewControllerDelegatableApp {
+    public static let taskType: AppTaskable.Type = _ResizerAppTask.self
+    public static let paramType: AppTaskParamable.Type = _ResizerAppAsset.self
+
+    public static var defaultConfigValue: AppConfigValuable {
+        let config = ResizerAppConfigValue()
+        return config
+    }
+
+    @objc dynamic
+    public private(set) lazy var config: ResizerAppConfigValue? = type(of:self).defaultConfigValue as? ResizerAppConfigValue
+
+    public private(set) lazy var content: AppDockContent? = ResizerAppDockContent()
+    public private(set) lazy var editViewDockContent: AppDockContent? = ResizerAppDockContent()
+
+    public private(set) var defaultEditStateValue: ImageEditStateValue?
+    public func setDefaultEditState(value: ImageEditStateValue?) {
+        defaultEditStateValue = value
+
+        var defaults = type(of: self).defaults as! ResizerAppDefaults
+
+        let filter = value?.ciFilter as? CIFrameFillFilter
+        defaults.resizeFilterName = filter?.name
+        defaults.backgroundColorValue = filter?.backgroundColor.rgba() ?? 0xFFFFFFFF
+        defaults.borderWidth = Double(filter?.borderWidth ?? 0)
+    }
+
+    public static let info = AppInfo(
+        identifier: "com.stells.batch.resizer"
+        , version: "1.2"
+        , phase: .release
+        , appType: ResizerApp.self
+            , displayName: "Framer".localized.localizedCapitalized
+            , description: "Resize and fill to fit your photos by the various sizes.".localized
+            , keywords: ["Resize", "Instasize", "Instafit", "No Crop", "Fit", "Scale", "Size","Transform","Instagram","Insta"]
+        , icon: AppIcon(source: R.image.resizerBAppIcon.name, style: .original)
+        , themeColor: UIColor(rgba: 0xFFE567FF)
+        , policy: AppPolicy(lifeCycle: AppLifecyclePolicy(instance: .availability), task: AppTaskPolicy.default)
+        , minOSVersion: nil
+    )
+
+    required public override init() {
+        super.init()
     }
 
     public var doneButtonTitle: String? {

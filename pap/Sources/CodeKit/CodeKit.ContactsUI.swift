@@ -41,8 +41,8 @@ extension CNContactViewController{
         if delegator == nil{
             delegator = CNContactViewControllerDelegator()
         }
-        delegator?.watch(\.contact) { t, c in
-            willDismiss?(t.contact)
+        delegator?.watch(\CNContactViewControllerDelegator.contact) { _, _ in
+            willDismiss?(delegator?.contact)
 
             navigationController.dismiss(animated: true) {
                 didDismiss?()

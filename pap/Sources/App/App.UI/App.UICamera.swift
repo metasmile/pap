@@ -131,7 +131,7 @@ class AppUICamera: UIView {
             self.cameraView.preferredTorchLevel = defaults.cameraTorchLevel
         }
 
-        cameraView.deviceMotion.watch(\.orientation){
+        cameraView.deviceMotion.watch(\UIDeviceMotion.orientation){
             let o = self.cameraView.deviceMotion.orientation
 
             var angle:Double = 0;
